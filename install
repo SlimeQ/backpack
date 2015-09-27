@@ -8,14 +8,14 @@ if test $1; then
     install_dir=$1
 fi
 
-sudo cp take $install_dir
-sudo cp clone $install_dir
-sudo cp drop $install_dir
-sudo cp inventory $install_dir
+cp take $install_dir
+cp clone $install_dir
+cp drop $install_dir
+cp inventory $install_dir
 
-sudo chmod +x $install_dir/take
-sudo chmod +x $install_dir/clone
-sudo chmod +x $install_dir/drop
-sudo chmod +x $install_dir/inventory
+chmod +x $install_dir/take
+chmod +x $install_dir/clone
+chmod +x $install_dir/drop
+chmod +x $install_dir/inventory
 
-sudo cp bash_completion /etc/bash_completion.d/backpack
+cp bash_completion /etc/bash_completion.d/backpack
