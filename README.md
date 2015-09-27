@@ -1,18 +1,26 @@
 # backpack
 
-a simple command line utility for moving things around
+A simple command line utility for moving things around.
 
-## commands
+## Commands
 - take
 - clone
 - drop
 - inventory
 
-## installation
+## Installation
 
-    ./install
-    
-## usage
+```
+./install
+```
+(will install to /bin)
+
+or use:
+```
+./install install_directory
+```
+
+## Usage
 
     $ take somefile.ext
     $ inventory

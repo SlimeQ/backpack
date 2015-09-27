@@ -1,11 +1,30 @@
-sudo cp take /bin
-sudo cp clone /bin
-sudo cp drop /bin
-sudo cp inventory /bin
+#!/bin/bash
 
-sudo chmod +x /bin/take
-sudo chmod +x /bin/clone
-sudo chmod +x /bin/drop
-sudo chmod +x /bin/inventory
+# Default to installing to /bin
+install_dir=/bin
 
-sudo cp bash_completion /etc/bash_completion.d/backpack
+# Install to arg 1 if passed in
+if test $1; then
+    install_dir=$1
+fi
+
+# Set up the initial backpack directory
+mkdir -vp ~/.backpack
+
+cp take $install_dir
+cp clone $install_dir
+cp drop $install_dir
+cp inventory $install_dir
+
+chmod +x $install_dir/take
+chmod +x $install_dir/clone
+chmod +x $install_dir/drop
+chmod +x $install_dir/inventory
+
+cp bash_completion /etc/bash_completion.d/backpack
+
+# Install drop completion for fish if the user has fish shell on their machine
+if [ -x $(which fish) ]; then
+    mkdir -vp ~/.config/fish/completions
+    cp drop.fish ~/.config/fish/completions/
+fi
