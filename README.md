@@ -6,6 +6,7 @@ a simple command line utility for moving things around
 - take
 - clone
 - drop
+- inventory
 
 ## installation
 
