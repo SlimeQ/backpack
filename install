@@ -1,0 +1,11 @@
+sudo cp take /bin
+sudo cp clone /bin
+sudo cp drop /bin
+sudo cp inventory /bin
+
+sudo chmod +x /bin/take
+sudo chmod +x /bin/clone
+sudo chmod +x /bin/drop
+sudo chmod +x /bin/inventory
+
+sudo cp bash_completion /etc/bash_completion.d/backpack

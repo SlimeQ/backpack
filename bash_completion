@@ -1,0 +1,7 @@
+_drop()
+{
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    COMPREPLY=( $(compgen -W "$(ls ~/.backpack)" -- $cur) )
+}
+
+complete -F _drop drop
