@@ -2,23 +2,25 @@
 
 A simple command line utility for moving things around.
 
-## commands
+## Commands
 - take
 - clone
 - drop
 - inventory
 
-## installation
+## Installation
 
-    ./install
+```
+./install
+```
+(will install to /bin)
 
-    (will install to /bin)
+or use:
+```
+./install install_directory
+```
 
-    or
-
-    ./install install_directory
-
-## usage
+## Usage
 
     $ take somefile.ext
     $ inventory
