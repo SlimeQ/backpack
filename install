@@ -8,6 +8,9 @@ if test $1; then
     install_dir=$1
 fi
 
+# Set up the initial backpack directory
+mkdir -vp ~/.backpack
+
 cp take $install_dir
 cp clone $install_dir
 cp drop $install_dir
@@ -19,3 +22,9 @@ chmod +x $install_dir/drop
 chmod +x $install_dir/inventory
 
 cp bash_completion /etc/bash_completion.d/backpack
+
+# Install drop completion for fish if the user has fish shell on their machine
+if [ -x $(which fish) ]; then
+    mkdir -vp ~/.config/fish/completions
+    cp drop.fish ~/.config/fish/completions/
+fi
