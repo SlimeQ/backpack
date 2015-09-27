@@ -1,6 +1,6 @@
 # backpack
 
-a simple command line utility for moving things around
+A simple command line utility for moving things around.
 
 ## commands
 - take
@@ -11,7 +11,13 @@ a simple command line utility for moving things around
 ## installation
 
     ./install
-    
+
+    (will install to /bin)
+
+    or
+
+    ./install install_directory
+
 ## usage
 
     $ take somefile.ext
