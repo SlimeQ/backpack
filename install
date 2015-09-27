@@ -1,11 +1,21 @@
-sudo cp take /bin
-sudo cp clone /bin
-sudo cp drop /bin
-sudo cp inventory /bin
+#!/bin/bash
 
-sudo chmod +x /bin/take
-sudo chmod +x /bin/clone
-sudo chmod +x /bin/drop
-sudo chmod +x /bin/inventory
+# Default to installing to /bin
+install_dir=/bin
+
+# Install to arg 1 if passed in
+if test $1; then
+    install_dir=$1
+fi
+
+sudo cp take $install_dir
+sudo cp clone $install_dir
+sudo cp drop $install_dir
+sudo cp inventory $install_dir
+
+sudo chmod +x $install_dir/take
+sudo chmod +x $install_dir/clone
+sudo chmod +x $install_dir/drop
+sudo chmod +x $install_dir/inventory
 
 sudo cp bash_completion /etc/bash_completion.d/backpack
